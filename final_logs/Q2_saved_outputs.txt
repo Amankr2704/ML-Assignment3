@@ -1,0 +1,212 @@
+Q2: text extracted from the saved notebook outputs.
+
+--- Notebook cell 1, execution count 8 ---
+Device: cpu
+Seed: 26001
+PyTorch version: 2.15.0+cpu
+
+--- Notebook cell 3, execution count 9 ---
+Q2 split matches the saved Q1 split.
+Training images: 45000
+Validation images: 5000
+Class counts in validation: [500 500 500 500 500 500 500 500 500 500]
+
+--- Notebook cell 6, execution count 11 ---
+<Figure size 900x300 with 3 Axes>
+Class: airplane
+
+--- Notebook cell 9, execution count 12 ---
+  Model  Trainable parameters
+0   MLP                357638
+1   CNN                356810
+Parameter difference: 0.23% of the MLP size
+
+--- Notebook cell 14, execution count 14 ---
+
+Starting MLP on clean images
+MLP | clean     | epoch  1/20 | train 0.411 | val 0.448 | val loss 1.585
+MLP | clean     | epoch  2/20 | train 0.486 | val 0.472 | val loss 1.531
+MLP | clean     | epoch  3/20 | train 0.516 | val 0.491 | val loss 1.481
+MLP | clean     | epoch  4/20 | train 0.534 | val 0.502 | val loss 1.451
+MLP | clean     | epoch  5/20 | train 0.555 | val 0.506 | val loss 1.421
+MLP | clean     | epoch  6/20 | train 0.572 | val 0.515 | val loss 1.438
+MLP | clean     | epoch  7/20 | train 0.581 | val 0.504 | val loss 1.448
+MLP | clean     | epoch  8/20 | train 0.595 | val 0.518 | val loss 1.424
+MLP | clean     | epoch  9/20 | train 0.609 | val 0.501 | val loss 1.492
+MLP | clean     | epoch 10/20 | train 0.616 | val 0.508 | val loss 1.515
+MLP | clean     | epoch 11/20 | train 0.628 | val 0.500 | val loss 1.515
+MLP | clean     | epoch 12/20 | train 0.636 | val 0.511 | val loss 1.502
+MLP | clean     | epoch 13/20 | train 0.646 | val 0.513 | val loss 1.529
+MLP | clean     | epoch 14/20 | train 0.653 | val 0.512 | val loss 1.529
+MLP | clean     | epoch 15/20 | train 0.665 | val 0.496 | val loss 1.604
+MLP | clean     | epoch 16/20 | train 0.672 | val 0.498 | val loss 1.560
+MLP | clean     | epoch 17/20 | train 0.684 | val 0.517 | val loss 1.576
+MLP | clean     | epoch 18/20 | train 0.686 | val 0.509 | val loss 1.618
+MLP | clean     | epoch 19/20 | train 0.695 | val 0.505 | val loss 1.616
+MLP | clean     | epoch 20/20 | train 0.699 | val 0.511 | val loss 1.613
+Finished in 6.3 minutes.
+
+
+Starting CNN on clean images
+CNN | clean     | epoch  1/20 | train 0.461 | val 0.581 | val loss 1.184
+CNN | clean     | epoch  2/20 | train 0.630 | val 0.661 | val loss 0.973
+CNN | clean     | epoch  3/20 | train 0.701 | val 0.700 | val loss 0.849
+CNN | clean     | epoch  4/20 | train 0.743 | val 0.728 | val loss 0.779
+CNN | clean     | epoch  5/20 | train 0.778 | val 0.727 | val loss 0.793
+CNN | clean     | epoch  6/20 | train 0.807 | val 0.749 | val loss 0.747
+CNN | clean     | epoch  7/20 | train 0.830 | val 0.750 | val loss 0.753
+CNN | clean     | epoch  8/20 | train 0.854 | val 0.754 | val loss 0.751
+CNN | clean     | epoch  9/20 | train 0.877 | val 0.745 | val loss 0.833
+CNN | clean     | epoch 10/20 | train 0.898 | val 0.751 | val loss 0.868
+CNN | clean     | epoch 11/20 | train 0.916 | val 0.740 | val loss 0.958
+CNN | clean     | epoch 12/20 | train 0.929 | val 0.748 | val loss 0.993
+CNN | clean     | epoch 13/20 | train 0.942 | val 0.739 | val loss 1.121
+CNN | clean     | epoch 14/20 | train 0.954 | val 0.748 | val loss 1.158
+CNN | clean     | epoch 15/20 | train 0.959 | val 0.747 | val loss 1.249
+CNN | clean     | epoch 16/20 | train 0.965 | val 0.752 | val loss 1.307
+CNN | clean     | epoch 17/20 | train 0.971 | val 0.747 | val loss 1.358
+CNN | clean     | epoch 18/20 | train 0.970 | val 0.746 | val loss 1.397
+CNN | clean     | epoch 19/20 | train 0.969 | val 0.754 | val loss 1.543
+CNN | clean     | epoch 20/20 | train 0.974 | val 0.744 | val loss 1.602
+Finished in 20.9 minutes.
+
+
+Starting MLP on shuffled images
+MLP | shuffled  | epoch  1/20 | train 0.414 | val 0.447 | val loss 1.572
+MLP | shuffled  | epoch  2/20 | train 0.484 | val 0.473 | val loss 1.505
+MLP | shuffled  | epoch  3/20 | train 0.517 | val 0.485 | val loss 1.486
+MLP | shuffled  | epoch  4/20 | train 0.536 | val 0.496 | val loss 1.464
+MLP | shuffled  | epoch  5/20 | train 0.556 | val 0.505 | val loss 1.432
+MLP | shuffled  | epoch  6/20 | train 0.575 | val 0.510 | val loss 1.443
+MLP | shuffled  | epoch  7/20 | train 0.584 | val 0.505 | val loss 1.441
+MLP | shuffled  | epoch  8/20 | train 0.600 | val 0.517 | val loss 1.417
+MLP | shuffled  | epoch  9/20 | train 0.610 | val 0.503 | val loss 1.501
+MLP | shuffled  | epoch 10/20 | train 0.619 | val 0.506 | val loss 1.501
+MLP | shuffled  | epoch 11/20 | train 0.633 | val 0.505 | val loss 1.490
+MLP | shuffled  | epoch 12/20 | train 0.639 | val 0.505 | val loss 1.505
+MLP | shuffled  | epoch 13/20 | train 0.651 | val 0.505 | val loss 1.529
+MLP | shuffled  | epoch 14/20 | train 0.659 | val 0.502 | val loss 1.540
+MLP | shuffled  | epoch 15/20 | train 0.668 | val 0.503 | val loss 1.590
+MLP | shuffled  | epoch 16/20 | train 0.675 | val 0.500 | val loss 1.566
+MLP | shuffled  | epoch 17/20 | train 0.684 | val 0.512 | val loss 1.566
+MLP | shuffled  | epoch 18/20 | train 0.692 | val 0.503 | val loss 1.606
+MLP | shuffled  | epoch 19/20 | train 0.698 | val 0.505 | val loss 1.598
+MLP | shuffled  | epoch 20/20 | train 0.704 | val 0.500 | val loss 1.677
+Finished in 5.8 minutes.
+
+
+Starting CNN on shuffled images
+CNN | shuffled  | epoch  1/20 | train 0.277 | val 0.336 | val loss 1.794
+CNN | shuffled  | epoch  2/20 | train 0.393 | val 0.445 | val loss 1.553
+CNN | shuffled  | epoch  3/20 | train 0.451 | val 0.463 | val loss 1.494
+CNN | shuffled  | epoch  4/20 | train 0.484 | val 0.478 | val loss 1.463
+CNN | shuffled  | epoch  5/20 | train 0.515 | val 0.490 | val loss 1.433
+CNN | shuffled  | epoch  6/20 | train 0.539 | val 0.499 | val loss 1.415
+CNN | shuffled  | epoch  7/20 | train 0.563 | val 0.495 | val loss 1.416
+CNN | shuffled  | epoch  8/20 | train 0.587 | val 0.507 | val loss 1.407
+CNN | shuffled  | epoch  9/20 | train 0.607 | val 0.499 | val loss 1.428
+CNN | shuffled  | epoch 10/20 | train 0.631 | val 0.490 | val loss 1.517
+CNN | shuffled  | epoch 11/20 | train 0.652 | val 0.496 | val loss 1.496
+CNN | shuffled  | epoch 12/20 | train 0.671 | val 0.497 | val loss 1.540
+CNN | shuffled  | epoch 13/20 | train 0.690 | val 0.496 | val loss 1.565
+CNN | shuffled  | epoch 14/20 | train 0.713 | val 0.491 | val loss 1.649
+CNN | shuffled  | epoch 15/20 | train 0.733 | val 0.485 | val loss 1.700
+CNN | shuffled  | epoch 16/20 | train 0.751 | val 0.496 | val loss 1.798
+CNN | shuffled  | epoch 17/20 | train 0.768 | val 0.487 | val loss 1.964
+CNN | shuffled  | epoch 18/20 | train 0.788 | val 0.482 | val loss 1.989
+CNN | shuffled  | epoch 19/20 | train 0.804 | val 0.478 | val loss 2.054
+CNN | shuffled  | epoch 20/20 | train 0.820 | val 0.480 | val loss 2.211
+Finished in 22.7 minutes.
+
+
+Starting MLP on grayscale images
+MLP | grayscale | epoch  1/20 | train 0.334 | val 0.371 | val loss 1.797
+MLP | grayscale | epoch  2/20 | train 0.410 | val 0.396 | val loss 1.714
+MLP | grayscale | epoch  3/20 | train 0.437 | val 0.421 | val loss 1.684
+MLP | grayscale | epoch  4/20 | train 0.455 | val 0.427 | val loss 1.651
+MLP | grayscale | epoch  5/20 | train 0.469 | val 0.432 | val loss 1.643
+MLP | grayscale | epoch  6/20 | train 0.484 | val 0.440 | val loss 1.634
+MLP | grayscale | epoch  7/20 | train 0.495 | val 0.442 | val loss 1.649
+MLP | grayscale | epoch  8/20 | train 0.503 | val 0.447 | val loss 1.617
+MLP | grayscale | epoch  9/20 | train 0.513 | val 0.417 | val loss 1.682
+MLP | grayscale | epoch 10/20 | train 0.524 | val 0.421 | val loss 1.710
+MLP | grayscale | epoch 11/20 | train 0.533 | val 0.422 | val loss 1.705
+MLP | grayscale | epoch 12/20 | train 0.539 | val 0.442 | val loss 1.708
+MLP | grayscale | epoch 13/20 | train 0.547 | val 0.424 | val loss 1.717
+MLP | grayscale | epoch 14/20 | train 0.554 | val 0.432 | val loss 1.741
+MLP | grayscale | epoch 15/20 | train 0.559 | val 0.431 | val loss 1.733
+MLP | grayscale | epoch 16/20 | train 0.567 | val 0.437 | val loss 1.731
+MLP | grayscale | epoch 17/20 | train 0.575 | val 0.430 | val loss 1.773
+MLP | grayscale | epoch 18/20 | train 0.581 | val 0.437 | val loss 1.757
+MLP | grayscale | epoch 19/20 | train 0.589 | val 0.433 | val loss 1.786
+MLP | grayscale | epoch 20/20 | train 0.595 | val 0.431 | val loss 1.809
+Finished in 13.2 minutes.
+
+
+Starting CNN on grayscale images
+CNN | grayscale | epoch  1/20 | train 0.431 | val 0.548 | val loss 1.273
+CNN | grayscale | epoch  2/20 | train 0.612 | val 0.652 | val loss 1.002
+CNN | grayscale | epoch  3/20 | train 0.681 | val 0.691 | val loss 0.904
+CNN | grayscale | epoch  4/20 | train 0.725 | val 0.699 | val loss 0.859
+CNN | grayscale | epoch  5/20 | train 0.757 | val 0.699 | val loss 0.874
+CNN | grayscale | epoch  6/20 | train 0.788 | val 0.726 | val loss 0.821
+CNN | grayscale | epoch  7/20 | train 0.813 | val 0.722 | val loss 0.830
+CNN | grayscale | epoch  8/20 | train 0.836 | val 0.735 | val loss 0.835
+CNN | grayscale | epoch  9/20 | train 0.859 | val 0.733 | val loss 0.876
+CNN | grayscale | epoch 10/20 | train 0.881 | val 0.737 | val loss 0.942
+CNN | grayscale | epoch 11/20 | train 0.899 | val 0.721 | val loss 1.036
+CNN | grayscale | epoch 12/20 | train 0.918 | val 0.728 | val loss 1.040
+CNN | grayscale | epoch 13/20 | train 0.931 | val 0.724 | val loss 1.153
+CNN | grayscale | epoch 14/20 | train 0.940 | val 0.722 | val loss 1.292
+CNN | grayscale | epoch 15/20 | train 0.953 | val 0.717 | val loss 1.495
+CNN | grayscale | epoch 16/20 | train 0.958 | val 0.726 | val loss 1.510
+CNN | grayscale | epoch 17/20 | train 0.960 | val 0.710 | val loss 1.537
+CNN | grayscale | epoch 18/20 | train 0.963 | val 0.714 | val loss 1.789
+CNN | grayscale | epoch 19/20 | train 0.969 | val 0.728 | val loss 1.773
+CNN | grayscale | epoch 20/20 | train 0.972 | val 0.707 | val loss 1.970
+Finished in 20.2 minutes.
+
+All six training runs are complete.
+
+--- Notebook cell 15, execution count 15 ---
+<Figure size 1500x400 with 3 Axes>
+
+--- Notebook cell 17, execution count 16 ---
+   Condition Model  Parameters  Selected epoch  Test accuracy  \
+0      clean   MLP      357638               5         0.5065   
+1      clean   CNN      356810               6         0.7490   
+2   shuffled   MLP      357638               8         0.5177   
+3   shuffled   CNN      356810               8         0.5132   
+4  grayscale   MLP      357638               8         0.4351   
+5  grayscale   CNN      356810               6         0.7211   
+
+   Test error rate  Mean confidence (correct)  Mean confidence (wrong)  
+0           0.4935                     0.6237                   0.4520  
+1           0.2510                     0.8564                   0.6146  
+2           0.4823                     0.6740                   0.4999  
+3           0.4868                     0.6398                   0.4737  
+4           0.5649                     0.5831                   0.4432  
+5           0.2789                     0.8299                   0.5882  
+
+--- Notebook cell 19, execution count 17 ---
+Test accuracy and the CNN–MLP difference:
+Model         CNN     MLP  CNN minus MLP
+Condition                               
+clean      0.7490  0.5065         0.2425
+shuffled   0.5132  0.5177        -0.0045
+grayscale  0.7211  0.4351         0.2860
+Test accuracy by class:
+Condition   clean        shuffled        grayscale       
+Model         MLP    CNN      MLP    CNN       MLP    CNN
+Class                                                    
+airplane    0.521  0.780    0.579  0.558     0.437  0.744
+automobile  0.544  0.865    0.595  0.590     0.526  0.871
+bird        0.412  0.579    0.388  0.358     0.336  0.470
+cat         0.328  0.551    0.318  0.310     0.240  0.574
+deer        0.414  0.746    0.479  0.408     0.407  0.756
+dog         0.406  0.582    0.383  0.410     0.291  0.620
+frog        0.541  0.856    0.572  0.647     0.517  0.792
+horse       0.549  0.816    0.603  0.572     0.537  0.759
+ship        0.677  0.862    0.689  0.727     0.549  0.790
+truck       0.673  0.853    0.571  0.552     0.511  0.835
+<Figure size 800x400 with 1 Axes>

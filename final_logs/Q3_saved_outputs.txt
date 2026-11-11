@@ -1,0 +1,166 @@
+Q3: text extracted from the saved notebook outputs.
+
+--- Notebook cell 1, execution count 1 ---
+Device: cpu
+Seed: 26001
+PyTorch: 2.15.0+cpu
+
+--- Notebook cell 3, execution count 2 ---
+Q2 CNN checkpoint found: results_q2\CNN_clean_best.pt
+Split matches Q1.
+Training images: 45000 | Validation images: 5000
+
+--- Notebook cell 5, execution count 3 ---
+<Figure size 500x300 with 2 Axes>
+
+--- Notebook cell 7, execution count 4 ---
+   Bottleneck size  Trainable parameters
+0               32                266531
+1              128                463235
+2              512               1250051
+
+--- Notebook cell 9, execution count 6 ---
+
+Training clean autoencoder with bottleneck 32
+clean_32   | epoch  1/20 | train MSE 0.03158 | val MSE 0.02226
+clean_32   | epoch  2/20 | train MSE 0.01916 | val MSE 0.01865
+clean_32   | epoch  3/20 | train MSE 0.01660 | val MSE 0.01632
+clean_32   | epoch  4/20 | train MSE 0.01585 | val MSE 0.01599
+clean_32   | epoch  5/20 | train MSE 0.01558 | val MSE 0.01579
+clean_32   | epoch  6/20 | train MSE 0.01541 | val MSE 0.01569
+clean_32   | epoch  7/20 | train MSE 0.01530 | val MSE 0.01556
+clean_32   | epoch  8/20 | train MSE 0.01514 | val MSE 0.01554
+clean_32   | epoch  9/20 | train MSE 0.01497 | val MSE 0.01537
+clean_32   | epoch 10/20 | train MSE 0.01490 | val MSE 0.01586
+clean_32   | epoch 11/20 | train MSE 0.01477 | val MSE 0.01512
+clean_32   | epoch 12/20 | train MSE 0.01474 | val MSE 0.01510
+clean_32   | epoch 13/20 | train MSE 0.01469 | val MSE 0.01508
+clean_32   | epoch 14/20 | train MSE 0.01464 | val MSE 0.01498
+clean_32   | epoch 15/20 | train MSE 0.01461 | val MSE 0.01497
+clean_32   | epoch 16/20 | train MSE 0.01459 | val MSE 0.01522
+clean_32   | epoch 17/20 | train MSE 0.01453 | val MSE 0.01491
+clean_32   | epoch 18/20 | train MSE 0.01450 | val MSE 0.01489
+clean_32   | epoch 19/20 | train MSE 0.01445 | val MSE 0.01497
+clean_32   | epoch 20/20 | train MSE 0.01441 | val MSE 0.01480
+Finished in 13.5 minutes.
+
+
+Training clean autoencoder with bottleneck 128
+clean_128  | epoch  1/20 | train MSE 0.02994 | val MSE 0.01838
+clean_128  | epoch  2/20 | train MSE 0.01578 | val MSE 0.01403
+clean_128  | epoch  3/20 | train MSE 0.01276 | val MSE 0.01211
+clean_128  | epoch  4/20 | train MSE 0.01150 | val MSE 0.01156
+clean_128  | epoch  5/20 | train MSE 0.01069 | val MSE 0.01102
+clean_128  | epoch  6/20 | train MSE 0.01009 | val MSE 0.00982
+clean_128  | epoch  7/20 | train MSE 0.00948 | val MSE 0.00951
+clean_128  | epoch  8/20 | train MSE 0.00891 | val MSE 0.00877
+clean_128  | epoch  9/20 | train MSE 0.00849 | val MSE 0.00839
+clean_128  | epoch 10/20 | train MSE 0.00826 | val MSE 0.00818
+clean_128  | epoch 11/20 | train MSE 0.00797 | val MSE 0.00796
+clean_128  | epoch 12/20 | train MSE 0.00776 | val MSE 0.00800
+clean_128  | epoch 13/20 | train MSE 0.00755 | val MSE 0.00847
+clean_128  | epoch 14/20 | train MSE 0.00739 | val MSE 0.00761
+clean_128  | epoch 15/20 | train MSE 0.00733 | val MSE 0.00731
+clean_128  | epoch 16/20 | train MSE 0.00719 | val MSE 0.00771
+clean_128  | epoch 17/20 | train MSE 0.00714 | val MSE 0.00725
+clean_128  | epoch 18/20 | train MSE 0.00708 | val MSE 0.00721
+clean_128  | epoch 19/20 | train MSE 0.00705 | val MSE 0.00714
+clean_128  | epoch 20/20 | train MSE 0.00700 | val MSE 0.00722
+Finished in 13.9 minutes.
+
+
+Training clean autoencoder with bottleneck 512
+clean_512  | epoch  1/20 | train MSE 0.02753 | val MSE 0.01638
+clean_512  | epoch  2/20 | train MSE 0.01402 | val MSE 0.01250
+clean_512  | epoch  3/20 | train MSE 0.01144 | val MSE 0.01110
+clean_512  | epoch  4/20 | train MSE 0.01015 | val MSE 0.00999
+clean_512  | epoch  5/20 | train MSE 0.00930 | val MSE 0.00901
+clean_512  | epoch  6/20 | train MSE 0.00860 | val MSE 0.00844
+clean_512  | epoch  7/20 | train MSE 0.00796 | val MSE 0.00796
+clean_512  | epoch  8/20 | train MSE 0.00738 | val MSE 0.00745
+clean_512  | epoch  9/20 | train MSE 0.00695 | val MSE 0.00687
+clean_512  | epoch 10/20 | train MSE 0.00663 | val MSE 0.00681
+clean_512  | epoch 11/20 | train MSE 0.00633 | val MSE 0.00630
+clean_512  | epoch 12/20 | train MSE 0.00609 | val MSE 0.00605
+clean_512  | epoch 13/20 | train MSE 0.00587 | val MSE 0.00584
+clean_512  | epoch 14/20 | train MSE 0.00563 | val MSE 0.00582
+clean_512  | epoch 15/20 | train MSE 0.00545 | val MSE 0.00558
+clean_512  | epoch 16/20 | train MSE 0.00527 | val MSE 0.00525
+clean_512  | epoch 17/20 | train MSE 0.00514 | val MSE 0.00514
+clean_512  | epoch 18/20 | train MSE 0.00502 | val MSE 0.00514
+clean_512  | epoch 19/20 | train MSE 0.00490 | val MSE 0.00524
+clean_512  | epoch 20/20 | train MSE 0.00480 | val MSE 0.00491
+Finished in 15.3 minutes.
+
+   Bottleneck size  Trainable parameters  Selected epoch  Validation MSE
+0               32                266531              20        0.014801
+1              128                463235              19        0.007141
+2              512               1250051              20        0.004913
+Selected bottleneck using validation MSE: 512
+
+--- Notebook cell 11, execution count 7 ---
+<Figure size 1100x400 with 2 Axes>
+
+--- Notebook cell 13, execution count 8 ---
+Training denoising autoencoder with bottleneck 512
+denoising  | epoch  1/20 | train MSE 0.03060 | val MSE 0.01980
+denoising  | epoch  2/20 | train MSE 0.01525 | val MSE 0.01365
+denoising  | epoch  3/20 | train MSE 0.01246 | val MSE 0.01195
+denoising  | epoch  4/20 | train MSE 0.01120 | val MSE 0.01088
+denoising  | epoch  5/20 | train MSE 0.01034 | val MSE 0.01010
+denoising  | epoch  6/20 | train MSE 0.00971 | val MSE 0.00942
+denoising  | epoch  7/20 | train MSE 0.00903 | val MSE 0.00895
+denoising  | epoch  8/20 | train MSE 0.00858 | val MSE 0.00860
+denoising  | epoch  9/20 | train MSE 0.00822 | val MSE 0.00850
+denoising  | epoch 10/20 | train MSE 0.00794 | val MSE 0.00819
+denoising  | epoch 11/20 | train MSE 0.00772 | val MSE 0.00771
+denoising  | epoch 12/20 | train MSE 0.00750 | val MSE 0.00769
+denoising  | epoch 13/20 | train MSE 0.00731 | val MSE 0.00759
+denoising  | epoch 14/20 | train MSE 0.00715 | val MSE 0.00723
+denoising  | epoch 15/20 | train MSE 0.00699 | val MSE 0.00734
+denoising  | epoch 16/20 | train MSE 0.00688 | val MSE 0.00699
+denoising  | epoch 17/20 | train MSE 0.00674 | val MSE 0.00693
+denoising  | epoch 18/20 | train MSE 0.00661 | val MSE 0.00683
+denoising  | epoch 19/20 | train MSE 0.00655 | val MSE 0.00713
+denoising  | epoch 20/20 | train MSE 0.00644 | val MSE 0.00650
+Finished in 27.2 minutes.
+
+Selected denoising epoch: 20
+Denoising validation MSE: 0.006503227628270785
+
+--- Notebook cell 15, execution count 9 ---
+Extracting training features for bottleneck 32
+Bottleneck 32: validation probe accuracy = 0.3236
+Extracting training features for bottleneck 128
+Bottleneck 128: validation probe accuracy = 0.3636
+Extracting training features for bottleneck 512
+Bottleneck 512: validation probe accuracy = 0.4146
+   Bottleneck size  Validation probe accuracy
+0               32                     0.3236
+1              128                     0.3636
+2              512                     0.4146
+
+--- Notebook cell 17, execution count 10 ---
+Loaded fixed Q2 CNN from validation-selected epoch: 6
+
+--- Notebook cell 19, execution count 11 ---
+Q3(a) and Q3(c):
+   Bottleneck size  Test reconstruction MSE  Test linear probe accuracy  \
+0               32                 0.014503                      0.3203   
+1              128                 0.006987                      0.3546   
+2              512                 0.004800                      0.4168   
+
+   Selected in Q3(a)  
+0              False  
+1              False  
+2               True  
+Selected clean autoencoder test MSE: 0.004800274352232615
+Q3(b):
+                   Input to fixed Q2 CNN  Test accuracy  Test error rate
+0                           Clean images         0.7490           0.2510
+1                           Noisy images         0.2507           0.7493
+2      Clean autoencoder on noisy images         0.4651           0.5349
+3  Denoising autoencoder on noisy images         0.4602           0.5398
+
+--- Notebook cell 21, execution count 12 ---
+<Figure size 1200x800 with 24 Axes>

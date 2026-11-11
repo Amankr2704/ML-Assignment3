@@ -1,0 +1,96 @@
+{
+  "student": "Aman Kumar",
+  "roll_number": "M26MAC001",
+  "split_seed": 26001,
+  "data": {
+    "dataset": "CIFAR-10",
+    "train": 45000,
+    "validation": 5000,
+    "test": 10000,
+    "stratified": true
+  },
+  "q1": {
+    "hidden_layers": [
+      [
+        512
+      ],
+      [
+        450,
+        450
+      ]
+    ],
+    "epochs": 25,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "weight_decay": 0.0001,
+    "memorization_subset": 5000,
+    "changed_label_fraction": 0.5,
+    "memorization_hidden": [
+      2048,
+      2048
+    ],
+    "memorization_epochs": 100,
+    "memorization_weight_decay": 0
+  },
+  "q2": {
+    "mlp_hidden": [
+      116
+    ],
+    "cnn_channels": [
+      32,
+      64,
+      128
+    ],
+    "cnn_fc_hidden": 128,
+    "epochs": 20,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "weight_decay": 0.0001,
+    "conditions": [
+      "clean",
+      "fixed pixel permutation",
+      "grayscale"
+    ]
+  },
+  "q3": {
+    "bottleneck_sizes": [
+      32,
+      128,
+      512
+    ],
+    "epochs": 20,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "gaussian_noise_std": 0.2,
+    "probe": "StandardScaler + SGDClassifier(log_loss)"
+  },
+  "q4": {
+    "q3_validation_selected_bottleneck": 512,
+    "training_subset": 3000,
+    "kernels": [
+      "linear",
+      "rbf",
+      "poly"
+    ],
+    "C": [
+      0.001,
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "gamma": "scale",
+    "poly_degree": 3,
+    "cluster_counts": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "cluster_method": "KMeans",
+    "cluster_selection": "validation silhouette"
+  }
+}

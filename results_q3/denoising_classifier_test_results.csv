@@ -1,0 +1,5 @@
+Input to fixed Q2 CNN,Test accuracy,Test error rate
+Clean images,0.749,0.251
+Noisy images,0.2507,0.7493000000000001
+Clean autoencoder on noisy images,0.4651,0.5348999999999999
+Denoising autoencoder on noisy images,0.4602,0.5398000000000001

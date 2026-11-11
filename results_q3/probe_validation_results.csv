@@ -1,0 +1,4 @@
+Bottleneck size,Validation probe accuracy
+32,0.3236
+128,0.3636
+512,0.4146

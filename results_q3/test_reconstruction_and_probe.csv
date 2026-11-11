@@ -1,0 +1,4 @@
+Bottleneck size,Test reconstruction MSE,Test linear probe accuracy,Selected in Q3(a)
+32,0.014502992554505666,0.3203,False
+128,0.00698679534693559,0.3546,False
+512,0.004800274352232615,0.4168,True

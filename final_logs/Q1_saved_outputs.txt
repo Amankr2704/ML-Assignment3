@@ -1,0 +1,137 @@
+Q1: text extracted from the saved notebook outputs.
+
+--- Notebook cell 2, execution count 2 ---
+Roll: M26MAC001 | seed: 26001 | device: cpu
+PyTorch: 2.15.0+cpu
+
+--- Notebook cell 4, execution count 5 ---
+Training: 45000 | validation: 5000
+     class  training  validation
+  airplane      4500         500
+automobile      4500         500
+      bird      4500         500
+       cat      4500         500
+      deer      4500         500
+       dog      4500         500
+      frog      4500         500
+     horse      4500         500
+      ship      4500         500
+     truck      4500         500
+
+--- Notebook cell 6, execution count 3 ---
+shallow: [512] hidden units, 1,578,506 trainable parameters
+deep: [450, 450] hidden units, 1,590,310 trainable parameters
+Relative difference: 0.75%
+
+--- Notebook cell 7, execution count 6 ---
+shallow  1/25 | train acc 0.416 | val acc 0.459 | val loss 1.551
+shallow  2/25 | train acc 0.485 | val acc 0.470 | val loss 1.527
+shallow  3/25 | train acc 0.520 | val acc 0.484 | val loss 1.502
+shallow  4/25 | train acc 0.539 | val acc 0.504 | val loss 1.484
+shallow  5/25 | train acc 0.566 | val acc 0.497 | val loss 1.518
+shallow  6/25 | train acc 0.590 | val acc 0.520 | val loss 1.513
+shallow  7/25 | train acc 0.609 | val acc 0.512 | val loss 1.530
+shallow  8/25 | train acc 0.626 | val acc 0.503 | val loss 1.533
+shallow  9/25 | train acc 0.646 | val acc 0.489 | val loss 1.742
+shallow 10/25 | train acc 0.660 | val acc 0.508 | val loss 1.601
+shallow 11/25 | train acc 0.680 | val acc 0.522 | val loss 1.635
+shallow 12/25 | train acc 0.691 | val acc 0.522 | val loss 1.651
+shallow 13/25 | train acc 0.709 | val acc 0.495 | val loss 1.801
+shallow 14/25 | train acc 0.727 | val acc 0.504 | val loss 1.850
+shallow 15/25 | train acc 0.742 | val acc 0.517 | val loss 1.811
+shallow 16/25 | train acc 0.751 | val acc 0.513 | val loss 1.837
+shallow 17/25 | train acc 0.767 | val acc 0.516 | val loss 1.900
+shallow 18/25 | train acc 0.771 | val acc 0.508 | val loss 2.043
+shallow 19/25 | train acc 0.785 | val acc 0.514 | val loss 1.945
+shallow 20/25 | train acc 0.797 | val acc 0.509 | val loss 2.124
+shallow 21/25 | train acc 0.810 | val acc 0.507 | val loss 2.198
+shallow 22/25 | train acc 0.818 | val acc 0.504 | val loss 2.263
+shallow 23/25 | train acc 0.820 | val acc 0.508 | val loss 2.290
+shallow 24/25 | train acc 0.829 | val acc 0.531 | val loss 2.277
+shallow 25/25 | train acc 0.842 | val acc 0.515 | val loss 2.616
+shallow elapsed: 13.8 minutes
+deep     1/25 | train acc 0.416 | val acc 0.469 | val loss 1.526
+deep     2/25 | train acc 0.494 | val acc 0.495 | val loss 1.436
+deep     3/25 | train acc 0.530 | val acc 0.512 | val loss 1.403
+deep     4/25 | train acc 0.563 | val acc 0.513 | val loss 1.404
+deep     5/25 | train acc 0.595 | val acc 0.520 | val loss 1.401
+deep     6/25 | train acc 0.623 | val acc 0.533 | val loss 1.436
+deep     7/25 | train acc 0.649 | val acc 0.527 | val loss 1.475
+deep     8/25 | train acc 0.675 | val acc 0.527 | val loss 1.470
+deep     9/25 | train acc 0.704 | val acc 0.530 | val loss 1.564
+deep    10/25 | train acc 0.726 | val acc 0.523 | val loss 1.634
+deep    11/25 | train acc 0.753 | val acc 0.528 | val loss 1.690
+deep    12/25 | train acc 0.775 | val acc 0.530 | val loss 1.777
+deep    13/25 | train acc 0.799 | val acc 0.516 | val loss 1.871
+deep    14/25 | train acc 0.811 | val acc 0.516 | val loss 1.989
+deep    15/25 | train acc 0.830 | val acc 0.518 | val loss 2.132
+deep    16/25 | train acc 0.846 | val acc 0.517 | val loss 2.248
+deep    17/25 | train acc 0.857 | val acc 0.512 | val loss 2.370
+deep    18/25 | train acc 0.864 | val acc 0.529 | val loss 2.461
+deep    19/25 | train acc 0.874 | val acc 0.515 | val loss 2.608
+deep    20/25 | train acc 0.887 | val acc 0.507 | val loss 2.665
+deep    21/25 | train acc 0.892 | val acc 0.516 | val loss 2.854
+deep    22/25 | train acc 0.893 | val acc 0.516 | val loss 2.965
+deep    23/25 | train acc 0.901 | val acc 0.524 | val loss 2.997
+deep    24/25 | train acc 0.910 | val acc 0.516 | val loss 3.080
+deep    25/25 | train acc 0.909 | val acc 0.520 | val loss 3.159
+deep elapsed: 10.1 minutes
+
+--- Notebook cell 8, execution count 7 ---
+<Figure size 1200x400 with 2 Axes>
+shallow: selected epoch 4, validation accuracy 0.5036, validation loss 1.4835
+deep: selected epoch 5, validation accuracy 0.5202, validation loss 1.4007
+
+--- Notebook cell 11, execution count None ---
+Memorization model parameters: 10,510,346
+Examples: 5000 | clean labels: 2500 | changed labels: 2500
+
+--- Notebook cell 12, execution count 9 ---
+  1/100 | val 0.283 | corrupted: true 0.279, wrong 0.100
+  5/100 | val 0.295 | corrupted: true 0.261, wrong 0.190
+ 10/100 | val 0.283 | corrupted: true 0.162, wrong 0.453
+ 15/100 | val 0.242 | corrupted: true 0.078, wrong 0.681
+ 20/100 | val 0.249 | corrupted: true 0.063, wrong 0.782
+ 25/100 | val 0.241 | corrupted: true 0.042, wrong 0.830
+ 30/100 | val 0.226 | corrupted: true 0.015, wrong 0.922
+ 35/100 | val 0.240 | corrupted: true 0.038, wrong 0.842
+ 40/100 | val 0.243 | corrupted: true 0.012, wrong 0.954
+ 45/100 | val 0.237 | corrupted: true 0.025, wrong 0.893
+ 50/100 | val 0.231 | corrupted: true 0.016, wrong 0.950
+ 55/100 | val 0.228 | corrupted: true 0.026, wrong 0.855
+ 60/100 | val 0.247 | corrupted: true 0.016, wrong 0.940
+ 65/100 | val 0.248 | corrupted: true 0.022, wrong 0.918
+ 70/100 | val 0.228 | corrupted: true 0.012, wrong 0.910
+ 75/100 | val 0.239 | corrupted: true 0.002, wrong 0.994
+ 80/100 | val 0.245 | corrupted: true 0.001, wrong 0.996
+ 85/100 | val 0.215 | corrupted: true 0.007, wrong 0.948
+ 90/100 | val 0.233 | corrupted: true 0.032, wrong 0.870
+ 95/100 | val 0.247 | corrupted: true 0.005, wrong 0.981
+100/100 | val 0.256 | corrupted: true 0.002, wrong 0.995
+Elapsed: 19.7 minutes
+
+--- Notebook cell 13, execution count 10 ---
+<Figure size 900x500 with 1 Axes>
+Selected trajectory points:
+    epoch  train_loss  online_train_acc  clean_train_acc  corrupted_true_acc  \
+0       1      2.3916            0.1506           0.3024              0.2788   
+25     26      0.5143            0.8350           0.9132              0.0364   
+50     51      0.1176            0.9616           0.9804              0.0088   
+99    100      0.0156            0.9948           0.9980              0.0020   
+
+    corrupted_wrong_acc  val_acc  
+0                0.0996   0.2830  
+25               0.8608   0.2416  
+50               0.9644   0.2422  
+99               0.9948   0.2556  
+First epoch with >=90% accuracy on wrong labels: 29
+Peak validation accuracy: 0.33 at epoch 4
+
+--- Notebook cell 16, execution count 11 ---
+     model hidden_sizes  parameters  selected_epoch  selected_val_loss  \
+0  shallow        [512]     1578506               4             1.4835   
+1     deep   [450, 450]     1590310               5             1.4007   
+
+   test_loss  test_accuracy  
+0     1.4646         0.5045  
+1     1.3947         0.5193  

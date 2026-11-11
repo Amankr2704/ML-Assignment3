@@ -1,0 +1,2 @@
+Kernel,C,SVM test accuracy,Clusters,Test ARI,Test NMI
+rbf,10.0,0.4245,5,0.03128190523058933,0.06053464816642039

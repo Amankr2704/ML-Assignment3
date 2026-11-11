@@ -1,0 +1,37 @@
+Pair,Type,Dataset index,True class,Prediction,Pairwise score
+cat vs dog,train support vector,2017,dog,,-0.38762884153617694
+cat vs dog,near-boundary test,3180,cat,airplane,-0.00026086032455541197
+cat vs dog,train support vector,6694,dog,,-0.6226917534199704
+cat vs dog,near-boundary test,6175,cat,frog,0.0003853335002291791
+cat vs dog,train support vector,24238,dog,,-0.6712573691108136
+cat vs dog,near-boundary test,565,cat,cat,0.0006270307681291443
+cat vs dog,train support vector,2730,dog,,-0.7185250595213989
+cat vs dog,near-boundary test,8302,cat,bird,-0.0009387208264673985
+cat vs dog,train support vector,11333,cat,,0.8765093481275229
+cat vs dog,near-boundary test,2565,cat,horse,-0.0018088807296844922
+cat vs dog,train support vector,26407,cat,,0.9280888473472962
+cat vs dog,near-boundary test,5797,dog,automobile,0.0024696737829937865
+automobile vs truck,train support vector,49977,automobile,,0.9995092901027367
+automobile vs truck,near-boundary test,4543,automobile,horse,-0.0003423649243353838
+automobile vs truck,train support vector,8479,truck,,-0.9995149570822732
+automobile vs truck,near-boundary test,3690,truck,truck,-0.0003713719443907276
+automobile vs truck,train support vector,29418,truck,,-0.9995189960453514
+automobile vs truck,near-boundary test,3764,automobile,airplane,-0.0006416116332551292
+automobile vs truck,train support vector,30697,truck,,-0.9995198147099744
+automobile vs truck,near-boundary test,6991,automobile,truck,-0.0007467860098866463
+automobile vs truck,train support vector,3643,truck,,-0.999526730367313
+automobile vs truck,near-boundary test,9211,automobile,automobile,0.0009293870293675816
+automobile vs truck,train support vector,45014,automobile,,0.9995285525490352
+automobile vs truck,near-boundary test,8385,truck,automobile,0.0009674586938111657
+bird vs deer,train support vector,17498,deer,,0.029377851467438043
+bird vs deer,near-boundary test,9765,deer,horse,-0.00023448168352829812
+bird vs deer,train support vector,5647,bird,,-0.0623789964702946
+bird vs deer,near-boundary test,3523,deer,frog,-0.00024097860728750087
+bird vs deer,train support vector,22284,deer,,0.09390699032018185
+bird vs deer,near-boundary test,396,bird,deer,-0.0012112649114306984
+bird vs deer,train support vector,3944,bird,,0.15677024713481374
+bird vs deer,near-boundary test,1003,deer,deer,-0.0013230238966786545
+bird vs deer,train support vector,3506,bird,,-0.19927346741169144
+bird vs deer,near-boundary test,7775,bird,cat,0.0015363588179732601
+bird vs deer,train support vector,16683,bird,,0.2460453962385269
+bird vs deer,near-boundary test,5960,bird,cat,-0.001702278467092866

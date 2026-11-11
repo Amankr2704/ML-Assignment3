@@ -1,0 +1,301 @@
+Q4: text extracted from the saved notebook outputs.
+
+--- Notebook cell 1, execution count 1 ---
+Device: cpu
+Seed: 26001
+Training subset size: 3000
+
+--- Notebook cell 3, execution count 2 ---
+Q3 validation-selected bottleneck: 512
+Q3 validation MSE: 0.004913396310309569
+Loaded Q3 checkpoint: results_q3\clean_512_best.pt
+Split matches Q3.
+Training subset: 3000 | validation: 5000
+Subset images per class: [300 300 300 300 300 300 300 300 300 300]
+
+--- Notebook cell 5, execution count 3 ---
+Extracting training features...
+Extracting validation features...
+Training feature shape: (3000, 512)
+Validation feature shape: (5000, 512)
+
+--- Notebook cell 7, execution count 4 ---
+linear | C= 0.001 | train=0.4517 | val=0.3620 | support=0.9733 | 10.8s
+linear | C=  0.01 | train=0.5687 | val=0.3760 | support=0.9300 | 9.4s
+linear | C=   0.1 | train=0.7090 | val=0.3546 | support=0.8943 | 10.4s
+linear | C=     1 | train=0.8293 | val=0.3382 | support=0.8667 | 15.3s
+linear | C=    10 | train=0.9320 | val=0.3184 | support=0.8627 | 49.6s
+rbf    | C= 0.001 | train=0.3247 | val=0.2646 | support=1.0000 | 15.7s
+rbf    | C=  0.01 | train=0.3247 | val=0.2646 | support=1.0000 | 15.6s
+rbf    | C=   0.1 | train=0.3703 | val=0.2984 | support=0.9987 | 15.4s
+rbf    | C=     1 | train=0.7733 | val=0.4164 | support=0.9770 | 13.7s
+rbf    | C=    10 | train=0.9967 | val=0.4182 | support=0.9857 | 14.4s
+poly   | C= 0.001 | train=0.1130 | val=0.1066 | support=1.0000 | 10.7s
+poly   | C=  0.01 | train=0.1223 | val=0.1078 | support=0.9997 | 10.6s
+poly   | C=   0.1 | train=0.2650 | val=0.1770 | support=0.9973 | 12.2s
+poly   | C=     1 | train=0.7663 | val=0.3200 | support=0.9820 | 12.0s
+poly   | C=    10 | train=0.9953 | val=0.3944 | support=0.9803 | 11.8s
+
+Selected using validation accuracy: {'Kernel': 'rbf', 'C': 10.0, 'Validation accuracy': 0.4182}
+    Kernel       C  Training accuracy  Validation accuracy  \
+0   linear   0.001             0.4517               0.3620   
+1   linear   0.010             0.5687               0.3760   
+2   linear   0.100             0.7090               0.3546   
+3   linear   1.000             0.8293               0.3382   
+4   linear  10.000             0.9320               0.3184   
+5      rbf   0.001             0.3247               0.2646   
+6      rbf   0.010             0.3247               0.2646   
+7      rbf   0.100             0.3703               0.2984   
+8      rbf   1.000             0.7733               0.4164   
+9      rbf  10.000             0.9967               0.4182   
+10    poly   0.001             0.1130               0.1066   
+11    poly   0.010             0.1223               0.1078   
+12    poly   0.100             0.2650               0.1770   
+13    poly   1.000             0.7663               0.3200   
+14    poly  10.000             0.9953               0.3944   
+
+    Support vector fraction  Seconds  
+0                    0.9733  10.8321  
+1                    0.9300   9.3542  
+2                    0.8943  10.4160  
+3                    0.8667  15.2768  
+4                    0.8627  49.5991  
+5                    1.0000  15.6772  
+6                    1.0000  15.5945  
+7                    0.9987  15.3946  
+8                    0.9770  13.6735  
+9                    0.9857  14.3651  
+10                   1.0000  10.7271  
+11                   0.9997  10.6333  
+12                   0.9973  12.2142  
+13                   0.9820  11.9561  
+14                   0.9803  11.8409  
+
+--- Notebook cell 10, execution count 5 ---
+<Figure size 1200x400 with 2 Axes>
+
+--- Notebook cell 12, execution count 6 ---
+K= 5 | validation silhouette=0.0536
+K=10 | validation silhouette=0.0102
+K=15 | validation silhouette=0.0017
+K=20 | validation silhouette=-0.0012
+Selected number of clusters using validation data: 5
+   Clusters  Validation silhouette  Training inertia  Seconds
+0         5                 0.0536       668199.8750   1.3927
+1        10                 0.0102       625260.1875   1.5175
+2        15                 0.0017       601650.5000   2.0882
+3        20                -0.0012       586086.3125   2.3154
+
+--- Notebook cell 15, execution count 7 ---
+Extracting official test features...
+Selected SVM test accuracy: 0.4245
+Test ARI: 0.0313
+Test NMI: 0.0605
+Test cluster-to-class contingency table:
+True class  airplane  automobile  bird  cat  deer  dog  frog  horse  ship  \
+Cluster                                                                     
+0                311         207   106   80    56   96    31    174   412   
+1                 54         192    91  134    65  135   107     91    61   
+2                115         373   285  372   332  410   422    400   141   
+3                386         115   465  341   534  310   380    279   358   
+4                134         113    53   73    13   49    60     56    28   
+
+True class  truck  
+Cluster            
+0             414  
+1              95  
+2             259  
+3             122  
+4             110  
+
+--- Notebook cell 18, execution count 8 ---
+Three pairs with the most two-way test mistakes:
+       Class A Class B  Class A ID  Class B ID  A predicted B  B predicted A  \
+25         cat     dog           3           5            197            219   
+16  automobile   truck           1           9            166            224   
+18        bird    deer           2           4            123            174   
+
+    Two-way mistakes  
+25               416  
+16               390  
+18               297  
+<Figure size 1500x500 with 12 Axes>
+<Figure size 1500x500 with 12 Axes>
+<Figure size 1500x500 with 12 Axes>
+                   Pair                  Type  Dataset index  True class  \
+0            cat vs dog  train support vector           2017         dog   
+1            cat vs dog    near-boundary test           3180         cat   
+2            cat vs dog  train support vector           6694         dog   
+3            cat vs dog    near-boundary test           6175         cat   
+4            cat vs dog  train support vector          24238         dog   
+5            cat vs dog    near-boundary test            565         cat   
+6            cat vs dog  train support vector           2730         dog   
+7            cat vs dog    near-boundary test           8302         cat   
+8            cat vs dog  train support vector          11333         cat   
+9            cat vs dog    near-boundary test           2565         cat   
+10           cat vs dog  train support vector          26407         cat   
+11           cat vs dog    near-boundary test           5797         dog   
+12  automobile vs truck  train support vector          49977  automobile   
+13  automobile vs truck    near-boundary test           4543  automobile   
+14  automobile vs truck  train support vector           8479       truck   
+15  automobile vs truck    near-boundary test           3690       truck   
+16  automobile vs truck  train support vector          29418       truck   
+17  automobile vs truck    near-boundary test           3764  automobile   
+18  automobile vs truck  train support vector          30697       truck   
+19  automobile vs truck    near-boundary test           6991  automobile   
+20  automobile vs truck  train support vector           3643       truck   
+21  automobile vs truck    near-boundary test           9211  automobile   
+22  automobile vs truck  train support vector          45014  automobile   
+23  automobile vs truck    near-boundary test           8385       truck   
+24         bird vs deer  train support vector          17498        deer   
+25         bird vs deer    near-boundary test           9765        deer   
+26         bird vs deer  train support vector           5647        bird   
+27         bird vs deer    near-boundary test           3523        deer   
+28         bird vs deer  train support vector          22284        deer   
+29         bird vs deer    near-boundary test            396        bird   
+30         bird vs deer  train support vector           3944        bird   
+31         bird vs deer    near-boundary test           1003        deer   
+32         bird vs deer  train support vector           3506        bird   
+33         bird vs deer    near-boundary test           7775        bird   
+34         bird vs deer  train support vector          16683        bird   
+35         bird vs deer    near-boundary test           5960        bird   
+
+    Prediction  Pairwise score  
+0                    -0.387629  
+1     airplane       -0.000261  
+2                    -0.622692  
+3         frog        0.000385  
+4                    -0.671257  
+5          cat        0.000627  
+6                    -0.718525  
+7         bird       -0.000939  
+8                     0.876509  
+9        horse       -0.001809  
+10                    0.928089  
+11  automobile        0.002470  
+12                    0.999509  
+13       horse       -0.000342  
+14                   -0.999515  
+15       truck       -0.000371  
+16                   -0.999519  
+17    airplane       -0.000642  
+18                   -0.999520  
+19       truck       -0.000747  
+20                   -0.999527  
+21  automobile        0.000929  
+22                    0.999529  
+23  automobile        0.000967  
+24                    0.029378  
+25       horse       -0.000234  
+26                   -0.062379  
+27        frog       -0.000241  
+28                    0.093907  
+29        deer       -0.001211  
+30                    0.156770  
+31        deer       -0.001323  
+32                   -0.199273  
+33         cat        0.001536  
+34                    0.246045  
+35         cat       -0.001702  
+
+--- Notebook cell 21, execution count 9 ---
+Candidate with at most 10% direct SVM confusion and the highest cluster overlap:
+   Class A Class B  Two-way SVM errors  SVM direct confusion rate  \
+36     dog   horse                 191                     0.0955   
+
+    Cluster distribution overlap  Class A SVM recall  Class B SVM recall  
+36                         0.915               0.317               0.411  
+All class-pair comparisons:
+       Class A     Class B  Two-way SVM errors  SVM direct confusion rate  \
+40        frog        ship                  25                     0.0125   
+42       horse        ship                  33                     0.0165   
+34        deer       truck                  33                     0.0165   
+23        bird       truck                  38                     0.0190   
+5     airplane        frog                  43                     0.0215   
+11  automobile        deer                  46                     0.0230   
+38         dog       truck                  49                     0.0245   
+33        deer        ship                  52                     0.0260   
+41        frog       truck                  57                     0.0285   
+13  automobile        frog                  58                     0.0290   
+37         dog        ship                  58                     0.0290   
+9   automobile        bird                  59                     0.0295   
+4     airplane         dog                  60                     0.0300   
+28         cat        ship                  63                     0.0315   
+22        bird        ship                  66                     0.0330   
+39        frog       horse                  70                     0.0350   
+12  automobile         dog                  72                     0.0360   
+14  automobile       horse                  80                     0.0400   
+3     airplane        deer                  81                     0.0405   
+2     airplane         cat                  85                     0.0425   
+10  automobile         cat                  94                     0.0470   
+6     airplane       horse                  94                     0.0470   
+29         cat       truck                  95                     0.0475   
+0     airplane  automobile                 111                     0.0555   
+21        bird       horse                 114                     0.0570   
+8     airplane       truck                 118                     0.0590   
+43       horse       truck                 127                     0.0635   
+15  automobile        ship                 128                     0.0640   
+27         cat       horse                 134                     0.0670   
+44        ship       truck                 146                     0.0730   
+30        deer         dog                 147                     0.0735   
+35         dog        frog                 156                     0.0780   
+24         cat        deer                 157                     0.0785   
+19        bird         dog                 158                     0.0790   
+1     airplane        bird                 171                     0.0855   
+32        deer       horse                 188                     0.0940   
+36         dog       horse                 191                     0.0955   
+17        bird         cat                 213                     0.1065   
+20        bird        frog                 221                     0.1105   
+31        deer        frog                 237                     0.1185   
+26         cat        frog                 244                     0.1220   
+7     airplane        ship                 280                     0.1400   
+18        bird        deer                 297                     0.1485   
+16  automobile       truck                 390                     0.1950   
+25         cat         dog                 416                     0.2080   
+
+    Cluster distribution overlap  Class A SVM recall  Class B SVM recall  
+40                         0.619               0.439               0.538  
+42                         0.683               0.411               0.538  
+34                         0.515               0.320               0.478  
+23                         0.631               0.319               0.478  
+5                          0.640               0.545               0.439  
+11                         0.581               0.570               0.320  
+38                         0.621               0.317               0.478  
+33                         0.629               0.320               0.538  
+41                         0.567               0.439               0.478  
+13                         0.686               0.570               0.439  
+37                         0.636               0.317               0.538  
+9                          0.650               0.570               0.319  
+4                          0.624               0.545               0.317  
+28                         0.651               0.308               0.538  
+22                         0.694               0.319               0.538  
+39                         0.857               0.439               0.411  
+12                         0.768               0.570               0.317  
+14                         0.809               0.570               0.411  
+3                          0.624               0.545               0.320  
+2                          0.663               0.545               0.308  
+10                         0.774               0.570               0.308  
+6                          0.678               0.545               0.411  
+29                         0.629               0.308               0.478  
+0                          0.604               0.545               0.570  
+21                         0.814               0.319               0.411  
+8                          0.712               0.545               0.478  
+43                         0.702               0.411               0.478  
+15                         0.552               0.570               0.538  
+27                         0.878               0.308               0.411  
+44                         0.764               0.538               0.478  
+30                         0.776               0.320               0.317  
+35                         0.907               0.317               0.439  
+24                         0.807               0.308               0.320  
+19                         0.831               0.319               0.317  
+1                          0.714               0.545               0.319  
+32                         0.745               0.320               0.411  
+36                         0.915               0.317               0.411  
+17                         0.850               0.319               0.308  
+20                         0.840               0.319               0.439  
+31                         0.821               0.320               0.439  
+26                         0.911               0.308               0.439  
+7                          0.866               0.545               0.538  
+18                         0.884               0.319               0.320  
+16                         0.786               0.570               0.478  
+25                         0.945               0.308               0.317  
