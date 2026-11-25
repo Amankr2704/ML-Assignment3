@@ -52,3 +52,8 @@ The official test set must not be used to tune models. The code selects checkpoi
 The saved CSVs and notebook outputs are the reported original run. Random seeds and deterministic cuDNN options are set, but exact bitwise agreement is not guaranteed across versions, operating systems, or hardware. The project environment snapshot describes packages installed when the repository was prepared; it cannot independently prove the exact versions at the time each original run occurred. Preserve the saved outputs when comparing reruns.
 
 CIFAR-10: Alex Krizhevsky, *Learning Multiple Layers of Features from Tiny Images*, 2009; https://www.cs.toronto.edu/~kriz/cifar.html.
+
+
+## Final submission
+
+This commit identifies the final repository snapshot for the assignment report.
